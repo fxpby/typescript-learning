@@ -1,0 +1,21 @@
+{
+  "name": "typescript-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxpby/typescript-learning.git"
+  },
+  "author": "fxpby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fxpby/typescript-learning/issues"
+  },
+  "homepage": "https://github.com/fxpby/typescript-learning#readme"
+}
