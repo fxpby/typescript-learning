@@ -1,11 +1,11 @@
-const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   entry: './src/index.ts',
   output: {
-    path: __dirname,
-    filename: './dist/bundle.js'
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -29,10 +29,4 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts']
   },
-  devServer: {
-    static: path.join(__dirname, './dist'),
-    hot: true,
-    open: true, // 自动打开浏览器
-    port: 9001
-  }
 }
