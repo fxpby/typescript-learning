@@ -1,8 +1,10 @@
 export default function() {
+  // 字符串、数字、布尔
   const str: string = 'hello olu, hello world'
   const num: number = 123
   const bool: boolean = true 
 
+  // 数组
   const arr: number[] = [1, 2, 3]
   const arr2: Array<number> = [1, 2, 3]
   console.log(str, num, bool, arr, arr2)
@@ -15,6 +17,7 @@ export default function() {
   power = num1
   num1 = power
 
+  // 函数
   function foo(num: number): boolean {
     return true
   }
@@ -31,6 +34,7 @@ export default function() {
     x.toUpperCase()
   })
 
+  // 对象
   function foo3(params: {x: number, y: string}) {
     console.log(params.x, params.y)
   }
@@ -42,6 +46,7 @@ export default function() {
   }
   foo4({x: 123})
 
+  // 联合类型
   function foo5(id: number | string | number[]) {
     if (typeof id === 'string') {
       console.log(id.toLocaleLowerCase())
@@ -61,4 +66,21 @@ export default function() {
   foo6([23333])
   foo6('2333')
 
+  type Point = {
+    x: number
+    y: string
+  }
+
+  // 类型别名
+  function foo7(x: Point) {
+    console.log(x)
+  }
+  foo7({x: 123, y: '233'})
+
+  type Id = number | string
+  function foo8(id: Id) {
+    console.log(id)
+  }
+  foo8(233)
+  foo8('233')
 }
