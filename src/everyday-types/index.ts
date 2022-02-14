@@ -120,4 +120,18 @@ export default function() {
     age: 23
   }
   console.log(bear1.name, bear1.age)
+
+  // 向现有的接口添加新字段（可同名方式拓展）
+  interface MyWindow {
+    count: number;
+  }
+  interface MyWindow {
+    title: string;
+  }
+  const window: MyWindow = {
+    count: 1,
+    title: '233'
+  }
+
+  // 类型别名 type 不能通过同名方式去拓展
 }
