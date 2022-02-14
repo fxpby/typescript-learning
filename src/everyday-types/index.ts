@@ -66,12 +66,12 @@ export default function() {
   foo6([23333])
   foo6('2333')
 
+  // 类型别名
   type Point = {
     x: number
     y: string
   }
 
-  // 类型别名
   function foo7(x: Point) {
     console.log(x)
   }
@@ -83,4 +83,14 @@ export default function() {
   }
   foo8(233)
   foo8('233')
+
+  // 接口
+  interface Point1 {
+    x: number,
+    y: string
+  }
+  function foo9(pt: Point1) {
+    console.log(pt)
+  }
+  foo9({x: 233, y: '233'})
 }
