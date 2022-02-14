@@ -93,4 +93,19 @@ export default function() {
     console.log(pt)
   }
   foo9({x: 233, y: '233'})
+
+  // 拓展接口
+  interface Animal {
+    name: string
+  }
+
+  interface Bear extends Animal {
+    age: number
+  }
+
+  const bear: Bear = {
+    name: 'weini',
+    age: 23
+  }
+  console.log(bear.name, bear.age)
 }
