@@ -108,4 +108,16 @@ export default function() {
     age: 23
   }
   console.log(bear.name, bear.age)
+
+  type Animal1 = {
+    name: string
+  }
+  type Bear1 = Animal1 & {
+    age: number
+  }
+  const bear1: Bear1 = {
+    name: 'weini',
+    age: 23
+  }
+  console.log(bear1.name, bear1.age)
 }
