@@ -134,4 +134,11 @@ export default function() {
   }
 
   // 类型别名 type 不能通过同名方式去拓展
+
+  // 类型断言
+  const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+  const myCanvas2 = <HTMLCanvasElement>document.getElementById("main_canvas");
+  const testAssert = ('abcd' as any) as number
+  const testAssert2 = ('abcd' as unknown) as number
+
 }
