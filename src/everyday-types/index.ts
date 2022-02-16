@@ -1,8 +1,8 @@
-export default function() {
+export default function () {
   // 字符串、数字、布尔
   const str: string = 'hello olu, hello world'
   const num: number = 123
-  const bool: boolean = true 
+  const bool: boolean = true
 
   // 数组
   const arr: number[] = [1, 2, 3]
@@ -28,23 +28,23 @@ export default function() {
     console.log(num)
   }
 
-  const strArr: string[] = ["Olu", "Cool"]
+  const strArr: string[] = ['Olu', 'Cool']
 
   strArr.forEach(x => {
     x.toUpperCase()
   })
 
   // 对象
-  function foo3(params: {x: number, y: string}) {
+  function foo3(params: { x: number; y: string }) {
     console.log(params.x, params.y)
   }
 
-  foo3({x: 233, y: 'olu'})
+  foo3({ x: 233, y: 'olu' })
 
-  function foo4(params: {x: number, y?: string}) {
+  function foo4(params: { x: number; y?: string }) {
     console.log(params.x, params.y?.toLocaleLowerCase)
   }
-  foo4({x: 123})
+  foo4({ x: 123 })
 
   // 联合类型
   function foo5(id: number | string | number[]) {
@@ -75,7 +75,7 @@ export default function() {
   function foo7(x: Point) {
     console.log(x)
   }
-  foo7({x: 123, y: '233'})
+  foo7({ x: 123, y: '233' })
 
   type Id = number | string
   function foo8(id: Id) {
@@ -86,13 +86,13 @@ export default function() {
 
   // 接口
   interface Point1 {
-    x: number,
+    x: number
     y: string
   }
   function foo9(pt: Point1) {
     console.log(pt)
   }
-  foo9({x: 233, y: '233'})
+  foo9({ x: 233, y: '233' })
 
   // 拓展接口
   interface Animal {
@@ -105,7 +105,7 @@ export default function() {
 
   const bear: Bear = {
     name: 'weini',
-    age: 23
+    age: 23,
   }
   console.log(bear.name, bear.age)
 
@@ -117,28 +117,27 @@ export default function() {
   }
   const bear1: Bear1 = {
     name: 'weini',
-    age: 23
+    age: 23,
   }
   console.log(bear1.name, bear1.age)
 
   // 向现有的接口添加新字段（可同名方式拓展）
   interface MyWindow {
-    count: number;
+    count: number
   }
   interface MyWindow {
-    title: string;
+    title: string
   }
   const window: MyWindow = {
     count: 1,
-    title: '233'
+    title: '233',
   }
 
   // 类型别名 type 不能通过同名方式去拓展
 
   // 类型断言
-  const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
-  const myCanvas2 = <HTMLCanvasElement>document.getElementById("main_canvas");
-  const testAssert = ('abcd' as any) as number
-  const testAssert2 = ('abcd' as unknown) as number
-
+  const myCanvas = document.getElementById('main_canvas') as HTMLCanvasElement
+  const myCanvas2 = <HTMLCanvasElement>document.getElementById('main_canvas')
+  const testAssert = 'abcd' as any as number
+  const testAssert2 = 'abcd' as unknown as number
 }
