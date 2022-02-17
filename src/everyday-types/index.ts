@@ -158,4 +158,21 @@ export default function () {
     // 不做显示检查，从类型中删除 null 和 undefined
     x!.toFixed()
   }
+
+  // 枚举
+  enum Direction {
+    Up = 3,
+    Down,
+    Left,
+    Right,
+  }
+  console.log(Direction.Up, Direction.Down)
+
+  // 计算所得项会导致无法获取初始值而报错
+  // enum Direction2 {
+  //   Up = 'blue'.length,
+  //   Down,
+  //   Left,
+  //   Right,
+  // }
 }
