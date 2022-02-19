@@ -1,12 +1,12 @@
-
 module.exports = {
   // 若项目中有多个子项目，且每个项目都会有.eslintrc，子项目会一直向上查找所有的.eslintrc，直到找到root:true的eslintrc，再将所有的.eslintrc合并
-	root: true,
-  // 对环境定义的一组全局变量的预设 
+  root: true,
+  // 对环境定义的一组全局变量的预设
   env: {
     browser: true,
     es6: true,
     node: true,
+    es2020: true,
   },
   // 继承另一个配置文件的所有特性
   extends: [

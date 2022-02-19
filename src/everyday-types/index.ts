@@ -177,7 +177,7 @@ export default function () {
   // }
 
   // bigint 非常大的整数
-  // const onehundred: bigint = BigInt(100)
+  const onehundred: bigint = BigInt(100)
   const anotherHundred: bigint = 100n
   // symbol 全局唯一引用
 }
