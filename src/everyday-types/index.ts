@@ -179,5 +179,10 @@ export default function () {
   // bigint 非常大的整数
   const onehundred: bigint = BigInt(100)
   const anotherHundred: bigint = 100n
+
   // symbol 全局唯一引用
+  const name1 = Symbol('name')
+  const name2 = Symbol('name2')
+  // 此条件将始终返回 "false"，因为类型 "typeof name1" 和 "typeof name2" 没有重叠。
+  // console.log(name1 === name2)
 }
