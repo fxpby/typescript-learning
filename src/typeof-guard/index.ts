@@ -5,3 +5,14 @@ function padLeft(padding: number | string, input: string): string {
     return padding + input
   }
 }
+
+function printAll(strs: string | string[] | null) {
+  if (typeof strs === 'object') {
+    // 会报错，因为 typeof null === 'object'
+    // strs.forEach(s => {
+    //   console.log(s)
+    // })
+  } else if (typeof strs === 'string') {
+  } else {
+  }
+}
