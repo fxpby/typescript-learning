@@ -25,6 +25,7 @@ export default function () {
     }
     return `现在没有人在线`
   }
+  console.log(getUserOnlineMessage(0))
 
   function multiplyAll(values: number[] | undefined, factor: number) {
     if (!values) {
