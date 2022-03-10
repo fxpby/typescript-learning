@@ -37,4 +37,12 @@ export default function () {
     }
   }
   console.log(multiplyAll([2, 3, 4], 3))
+
+  // 等值缩小
+  function example1(x: string | number, y: string | boolean) {
+    // 检查都为 string 类型
+    if (x === y) {
+      x.toUpperCase()
+    }
+  }
 }
